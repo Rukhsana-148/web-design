@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Massage</title>
+        <style type="text/css">
+            .header{
+                width:300px;
+                height:200px;
+                background-color: aquamarine;
+                border-radius:25px;
+                margin-left:200px;
+                margin-top:30px;
+            }
+            h1{
+                text-align: center;
+                color:darkblue;
+            }
+            p{
+                text-align: center;
+            }
+            input{
+                margin-left:20px;
+                border-radius:25px;
+                height:20px;
+                padding-left: 5px;
+                border:2px solid darkblue;
+            }
+            button{
+                border-radius:25px;
+                border:none;
+                background-color:black;
+                color:white;
+            }
+            h4{
+                margin-left:20px;
+                color:darkgreen;
+            }
+            p1{
+                margin-left:100px;
+               margin-top:-40px;
+                position: absolute;
+                padding-right: 450px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Massage</h1>
+            <p>Write Massage</p>
+            <input id="inValue">
+            <button onclick="newMsg(); return false">Submit</button>
+            <h4>Massage :</h4>
+            <p1 id="massage"></p1>
+        </div>
+        
+       <script type="text/javascript">
+           function newMsg() {
+               var val = document.getElementById("inValue").value;
+               document.getElementById("massage").innerHTML = val;
+               if(val=='')
+                   {
+                       alert("You must Enter Something!");
+                   }
+               else{
+                   document.getElementById("inValue").value = "";
+               }
+           }
+        </script>
+    </body>
+</html>
